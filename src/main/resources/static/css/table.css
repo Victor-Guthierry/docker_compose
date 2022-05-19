@@ -1,0 +1,54 @@
+@charset "ISO-8859-1";
+
+.table {
+    width: 100%;
+    text-align: left;
+}
+
+.table th {
+    height: 50px;
+    background-color: var(--primary-color);
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+.table td {
+    height: 50px;
+    padding-left: 20px;
+}
+
+.table th:last-child,
+.table td:last-child {
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+.table tr:hover {
+    background-color: var(--secundary-color);
+}
+
+@media (width:480px) {
+
+    .table {
+        border-spacing: 5px;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tr {
+        box-shadow: 0 1px 3px var(--shadow-color);
+    }
+    /* Esse efeito só não vai pegar no primeiro elemento td */
+    .table td:not(:first-child) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .table td {
+        margin: 10px 0;
+    }
+    .table tr:hover {
+        background-color: inherit;
+    }
+}
